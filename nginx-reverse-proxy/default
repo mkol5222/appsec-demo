@@ -1,13 +1,13 @@
 
-upstream log2shell_host {
-  server log2shell:8080;
+upstream log4shell_host {
+  server log4shell:8080;
 }
 
 server {
   server_name log4shell.local;
   listen 80;
   location / {
-    proxy_pass http://log2shell_host;
+    proxy_pass http://log4shell_host;
   }
 }
 
