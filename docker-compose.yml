@@ -1,12 +1,12 @@
 version:  '3'
 services:
-  juice-shop:
-    image: bkimminich/juice-shop
-    #build:
-    #  dockerfile: Dockerfile
-    #  context: ./juice-shop
-    ports:
-        - '3000:3000'
+  # juice-shop:
+  #   image: bkimminich/juice-shop
+  #   #build:
+  #   #  dockerfile: Dockerfile
+  #   #  context: ./juice-shop
+  #   ports:
+  #       - '3000:3000'
   log4shell:
     image: ghcr.io/christophetd/log4shell-vulnerable-app
     ports:

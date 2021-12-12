@@ -1,15 +1,9 @@
-upstream log4shellhost {
-  server log4shell:5000
-}
 server {
   server_name log4shell.local;
   listen 80;
   location / {
-    proxy_pass http://log4shell:5000/;
+    proxy_pass http://log2shell:8080/;
   }
-
-
-
 }
 
 
