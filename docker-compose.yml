@@ -22,13 +22,13 @@ services:
     ports:
       - '80:80'
     ipc: host
-    #image: checkpoint/infinity-next-nginx
-    image: nginx
-    command: [nginx-debug, '-g', 'daemon off;']
+    image: checkpoint/infinity-next-nginx
+    #image: nginx
+    #command: [nginx-debug, '-g', 'daemon off;']
     volumes:
-    #  - ./nginx-reverse-proxy/default:/etc/nginx/conf.d/default.conf
-    - ./nginx-reverse-proxy/default:/etc/nginx/conf.d/default.conf:ro
-    - ./nginx-reverse-proxy/nginx.conf:/etc/nginx/nginx.conf:ro
+    - ./nginx-reverse-proxy/default:/etc/nginx/conf.d/default.conf
+    #- ./nginx-reverse-proxy/default:/etc/nginx/conf.d/default.conf:ro
+    #- ./nginx-reverse-proxy/nginx.conf:/etc/nginx/nginx.conf:ro
   agent-container:
     ipc: host
     volumes:
