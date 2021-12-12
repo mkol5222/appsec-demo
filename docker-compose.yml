@@ -7,7 +7,10 @@ services:
     #  context: ./juice-shop
     ports:
         - '3000:3000'
-
+  log4shell:
+    image: ghcr.io/christophetd/log4shell-vulnerable-app
+    ports:
+      - 5000:8080
   nginx-reverse-proxy:
     #build:
     #  dockerfile: Dockerfile
