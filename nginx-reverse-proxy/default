@@ -2,6 +2,18 @@ upstream log4shell_host {
   server log4shell:8080;
 }
 
+upstream web_host {
+  server web:80;
+}
+
+server {
+  server_name web.local;
+  listen 80;
+  location / {
+    proxy_pass http://web_host/;
+  }
+}
+
 server {
   server_name log4shell.local;
   listen 80;
