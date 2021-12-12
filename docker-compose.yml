@@ -20,7 +20,7 @@ services:
     ipc: host
     #image: checkpoint/infinity-next-nginx
     image: nginx
-    volumes:
+    #volumes:
     #  - ./nginx-reverse-proxy/default:/etc/nginx/conf.d/default.conf
     #- ./nginx-reverse-proxy/default:/etc/nginx/nginx.conf:ro
   agent-container:
