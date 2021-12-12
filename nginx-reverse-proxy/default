@@ -1,3 +1,8 @@
+
+upstream log2shell {
+  server log2shell:8080;
+}
+
 server {
   server_name log4shell.local;
   listen 80;
