@@ -19,6 +19,7 @@ server {
   listen 80;
   location / {
     proxy_pass http://log4shell_host/;
+    proxy_set_header Host localhost:5000;
   }
 }
 
